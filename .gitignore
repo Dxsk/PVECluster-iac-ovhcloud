@@ -31,4 +31,11 @@ terraform.rc
 .idea/
 
 # Ignore scripts directory if needed
-# scripts/ 
+# scripts/
+
+# Ansible
+*.retry
+ansible/*.retry
+inventory.yml
+group_vars/*.yml
+host_vars/*.yml
