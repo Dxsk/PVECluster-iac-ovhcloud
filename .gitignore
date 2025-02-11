@@ -28,4 +28,7 @@ terraform.rc
 
 # Système
 .DS_Store
-.idea/ 
+.idea/
+
+# Ignore scripts directory if needed
+# scripts/ 
