@@ -26,7 +26,7 @@ terraform.rc
 # Ignore lock files
 .terraform.lock.hcl
 
-# Système
+# System
 .DS_Store
 .idea/
 
