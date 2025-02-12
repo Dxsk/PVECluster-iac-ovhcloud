@@ -94,4 +94,16 @@ variable "instance_flavor" {
   description = "Instance type/flavor (d2-2, d2-4, etc.)"
   type        = string
   default     = "d2-4"
+}
+
+variable "block_storage_size" {
+  description = "Size of the block storage volume in GB"
+  type        = number
+  default     = 100
+}
+
+variable "snapshot_volume_size" {
+  description = "Size of the snapshot volume in GB"
+  type        = number
+  default     = 50
 } 

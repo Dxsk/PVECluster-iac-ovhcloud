@@ -34,4 +34,8 @@ private_ips = [
   "192.168.0.12",
   "192.168.0.13",
   "192.168.0.14"
-] 
+]
+
+# Block Storage configuration
+block_storage_size    = 100  # Size in GB
+snapshot_volume_size  = 50   # Size in GB 
