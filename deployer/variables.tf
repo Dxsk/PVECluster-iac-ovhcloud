@@ -78,6 +78,12 @@ variable "private_network_cidr" {
   default     = "192.168.0.0/24"
 }
 
+variable "ip_start_index" {
+  description = "Starting index for IP addresses in the private network"
+  type        = number
+  default     = 10  # Commencera à .10
+}
+
 variable "ssh_key_public" {
   description = "Content of the SSH public key"
   type        = string

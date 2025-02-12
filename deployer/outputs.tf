@@ -4,7 +4,7 @@ output "instance_ips" {
     for idx, instance in openstack_compute_instance_v2.instance : 
     "${var.instance_prefix}-${idx + 1}" => {
       public_ip  = instance.access_ip_v4
-      private_ip = instance.network[1].fixed_ip_v4
+      private_ip = cidrhost(var.private_network_cidr, var.ip_start_index + idx)
     }
   }
 }

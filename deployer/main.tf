@@ -62,6 +62,7 @@ resource "openstack_compute_instance_v2" "instance" {
 
   network {
     name = openstack_networking_network_v2.private_net.name
+    fixed_ip_v4 = cidrhost(var.private_network_cidr, var.ip_start_index + count.index)
   }
 
   tags = [var.environment, var.project_name]
@@ -84,5 +85,14 @@ resource "local_file" "public_ips" {
   content  = join("\n", [
     for instance in openstack_compute_instance_v2.instance : 
     "${instance.name} ${instance.access_ip_v4}"
+  ])
+}
+
+# Export private IPs to file
+resource "local_file" "private_ips" {
+  filename = "${path.module}/private_ips.txt"
+  content  = join("\n", [
+    for idx, instance in openstack_compute_instance_v2.instance : 
+    "${instance.name} ${cidrhost(var.private_network_cidr, var.ip_start_index + idx)}"
   ])
 }

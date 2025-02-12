@@ -21,4 +21,17 @@ ovh_consumer_key       = "votre_consumer_key"
 openstack_tenant_id = "votre_tenant_id"
 openstack_username  = "user-xxxxx"
 openstack_password  = "votre_password"
-region             = "GRA11" 
+region             = "GRA11"
+
+# Network configuration
+private_network_cidr = "192.168.0.0/24"  # Les IPs seront générées automatiquement à partir de .10
+ip_start_index = 10  # Optionnel, par défaut commence à .10
+
+# Network configuration
+private_ips = [
+  "192.168.0.10",
+  "192.168.0.11",
+  "192.168.0.12",
+  "192.168.0.13",
+  "192.168.0.14"
+] 

@@ -42,3 +42,10 @@ host_vars/*.yml
 
 # Generated files
 deployer/public_ips.txt
+deployer/private_ips.txt
+
+# OpenTofu registry and plugins
+registry.opentofu.org/
+.terraform.d/
+.terraform/
+terraform.d/
