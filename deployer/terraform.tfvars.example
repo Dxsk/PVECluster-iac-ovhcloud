@@ -1,0 +1,24 @@
+# Environment
+environment     = "dev"
+project_name    = "mon-super-projet"
+instance_count  = 5
+instance_prefix = "pve"
+instance_flavor = "d2-4"  # Options: d2-2, d2-4, d2-8, etc.
+
+# Volumes configuration
+additional_volumes = [100, 100]  # 2 disks of 100GB each
+volume_type       = "classic"    # or "high-speed" for better performance
+
+# SSH Key
+ssh_key_public    = "ssh-rsa AAAA... user@host"  # Replace with your public key content
+
+# OVH credentials
+ovh_application_key    = "votre_application_key"
+ovh_application_secret = "votre_application_secret"
+ovh_consumer_key       = "votre_consumer_key"
+
+# OpenStack credentials
+openstack_tenant_id = "votre_tenant_id"
+openstack_username  = "user-xxxxx"
+openstack_password  = "votre_password"
+region             = "GRA11" 
