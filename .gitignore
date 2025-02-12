@@ -39,3 +39,6 @@ ansible/*.retry
 inventory.yml
 group_vars/*.yml
 host_vars/*.yml
+
+# Generated files
+deployer/public_ips.txt
